@@ -10,6 +10,8 @@ import { Zoo } from "./components/Zoo";
 function App() {
   const [animals, setAnimals] = useState<IAnimal[]>([]);
 
+  // Jag får en varning på den häringa VS vill att jag ska ha en [], normaltsett lyder jag min kompilator i hur jag designar men, om jag minns rätt
+  // från föreläsningen så är en if-baserad lösning mer effektiv så jag kör på den.
   useEffect(() => {
     if (animals.length !== 0) return;
     setAnimals(JSON.parse(localStorage.getItem("animals") || "[]"));

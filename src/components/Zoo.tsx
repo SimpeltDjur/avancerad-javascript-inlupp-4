@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IAnimal } from "../models/IAnimal";
 import { StyledGalleryDiv } from "../styledcomponents/StyledGalleryDiv";
