@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(1, 84, 1);
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.layout header {
+  height: 90px;
+  background-color: rgb(1, 84, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: gold;
+}
+
+.theLinks {
+  color: gold;
+  text-decoration: none;
+}
+
+.layout main {
+  height: 100%;
+  width: 100%;
+  background-color: greenyellow;
+}
+
+.layout footer {
+  height: 90px;
+  background-color: rgb(1, 84, 1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: gold;
+}
