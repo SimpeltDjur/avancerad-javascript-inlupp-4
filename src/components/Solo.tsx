@@ -19,7 +19,7 @@ export function Solo() {
   }
 
   let hungryTag = <></>;
-  if (Date.parse(Date()) - Date.parse(animal.lastFed) > 10000) {
+  if (Date.parse(Date()) - Date.parse(animal.lastFed) > 14400000) {
     hungryTag = <div>HUNGRIG!!</div>;
   } else {
     hungryTag = (
@@ -29,7 +29,7 @@ export function Solo() {
     );
   }
   let feedButton = <></>;
-  if (Date.parse(Date()) - Date.parse(animal.lastFed) > 10000) {
+  if (Date.parse(Date()) - Date.parse(animal.lastFed) > 10800000) {
     feedButton = <button onClick={feed}>Mata Djur</button>;
   } else {
     feedButton = <></>;

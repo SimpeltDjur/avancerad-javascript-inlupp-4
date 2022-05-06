@@ -5,13 +5,11 @@ import { StyledGalleryDiv } from "../styledcomponents/StyledGalleryDiv";
 import { StyledTumbnail } from "../styledcomponents/StyledTumbnail";
 
 export function Zoo() {
-  const [animals] = useState<IAnimal[]>(
-    JSON.parse(localStorage.getItem("animals") || "[]")
-  );
+  let animals: IAnimal[] = JSON.parse(localStorage.getItem("animals") || "[]");
 
   let animalTags = animals.map((animal) => {
     let hungryTag = <></>;
-    if (Date.parse(Date()) - Date.parse(animal.lastFed) > 10000) {
+    if (Date.parse(Date()) - Date.parse(animal.lastFed) > 14400000) {
       hungryTag = <div>HUNGRIG!!</div>;
     } else {
       hungryTag = <></>;
