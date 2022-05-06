@@ -16,6 +16,7 @@ export function Solo() {
     let animals = JSON.parse(localStorage.getItem("animals") || "[]");
     animals[id] = { ...animal, lastFed: Date() };
     localStorage.setItem("animals", JSON.stringify(animals));
+    console.log(JSON.parse(localStorage.getItem("animals") || "[]"));
   }
 
   let hungryTag = <></>;
