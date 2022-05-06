@@ -16,7 +16,7 @@ function App() {
     if (animals.length !== 0) return;
     setAnimals(JSON.parse(localStorage.getItem("animals") || "[]"));
 
-    if (animals.length !== 0) {
+    if (animals.length === 0) {
       axios
         .get<IAnimal[]>("https://animals.azurewebsites.net/api/animals")
         .then((responce) => {
